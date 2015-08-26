@@ -1,0 +1,24 @@
+{
+  "name": "Soundcloud Controls",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_title": "Soundcloud Controls",
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "*://soundcloud.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://soundcloud.com/*"
+      ],
+      "js": [
+        "js/runInTab.js"
+      ]
+    }
+  ]
+}

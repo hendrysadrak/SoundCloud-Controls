@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Soundcloud Controls</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow: hidden;
+            background: #eee;
+            color: #1a1a1a;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+        }
+
+        .row {
+            width: calc(7rem * 3);
+            display: block;
+        }
+
+        .control-wrap {
+            height: 7rem;
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: stretch;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        .btn {
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn-control {
+            flex: 1;
+            color: transparent;
+            background-size: 3rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            outline: 0;
+        }
+
+        .btn-prev {
+            background-image: url(svg/prev.svg);
+        }
+
+        .btn-next {
+            background-image: url(svg/next.svg);
+        }
+
+        .btn-pause {
+            background-image: url(svg/pause.svg);
+        }
+
+        .btn-pause.is-play {
+            background-image: url(svg/play.svg);
+        }
+
+        .ripple {
+            overflow: hidden;
+            position: relative;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            user-select: none;
+            pointer-events: none;
+            padding: 0;
+            margin: 0;
+            opacity: 0.6;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .info-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px 10px;
+        }
+
+        a {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<section class="row control-wrap">
+    <button data-type="prev" title="Previous" class="btn ripple btn-control btn-prev">Previous</button>
+    <button data-type="pause" title="Play" class="btn ripple btn-control btn-pause">Play / Pause</button>
+    <button data-type="next" title="Naxt" class="btn ripple btn-control btn-next">Next</button>
+</section>
+
+<section class="row info-wrap">
+    <div><a class="js-settings" href="#settings">Settings</a></div>
+    <div>Made by <a target="_blank" href="https://twitter.com/hendrysadrak">@hendrysadrak</a></div>
+</section>
+
+<script src="js/jquery3a1.js"></script>
+<script src="js/popup.js"></script>
+
+</body>
+</html>
