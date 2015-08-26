@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 11.5px;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .row {
@@ -43,7 +43,7 @@ body {
 .btn-control {
     flex: 1;
     color: transparent;
-    background-size: 35px;
+    background-size: 40px;
     background-position: center center;
     background-repeat: no-repeat;
     outline: 0;
@@ -87,6 +87,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 
 a {
