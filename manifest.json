@@ -11,8 +11,11 @@
   "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)",
   "permissions": [
     "tabs",
-    "*://soundcloud.com/*"
+    "storage",
+    "*://soundcloud.com/*",
+    "https://www.google-analytics.com/"
   ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
   "content_scripts": [
     {
       "matches": [

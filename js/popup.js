@@ -1,7 +1,15 @@
+"use strict";
+
+var service = analytics.getService('hs.soundcloud_controls');
+var tracker = service.getTracker('UA-62812857-3');
+
+tracker.sendAppView('MainView');
+tracker.sendEvent('View', 'Open', 'Main');
+
 /**
  * main code
  */
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
     /**
      * trackMethod
      * @type {string}
@@ -13,6 +21,11 @@
          * Set the trackMethod
          */
         trackMethod = $(this).data('type') || e;
+
+        /**
+         * send ga
+         */
+        tracker.sendEvent('Controls', 'Click', trackMethod);
 
         /**
          * Get soundcloud tabs
@@ -56,6 +69,8 @@
         $('.btn-control').on('click', onControlsClick);
         $('.js-settings').on('click', function (e) {
             e.preventDefault();
+
+            tracker.sendEvent('Author', 'Click', 'Twitter');
         });
     }
 
@@ -68,7 +83,7 @@
      * Send fake call
      */
     onControlsClick('fake');
-})();
+});
 
 /**
  * ripple effect
