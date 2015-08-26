@@ -1,9 +1,9 @@
 {
-  "name": "Soundcloud Controls",
+  "name": "SoundCloud Controls",
   "version": "1.0.0",
   "manifest_version": 2,
   "browser_action": {
-    "default_title": "Soundcloud Controls",
+    "default_title": "SoundCloud Controls",
     "default_icon": "img/icon.png",
     "default_popup": "popup.html"
   },
