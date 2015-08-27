@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "SoundCloud Controls",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "SoundCloud Music Player Controls",
   "browser_action": {
     "default_title": "SoundCloud Controls",
