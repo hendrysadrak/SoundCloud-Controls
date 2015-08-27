@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function afterScriptRun(c) {
+        /**
+         * Toggle play button
+         */
         if (c.isPlaying) {
             $('.btn-pause')
                 .attr('title', 'Pause')
@@ -74,7 +77,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 .addClass('is-play');
         }
 
+        /**
+         * Show song name
+         */
         $('.js-song').text(c.currentTrack || '');
+
+        tracker.sendEvent('Song', 'Listen', c.currentTrack);
     };
 
     function main() {
