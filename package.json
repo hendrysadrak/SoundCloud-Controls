@@ -1,0 +1,13 @@
+{
+  "name": "asd",
+  "version": "1.0.0",
+  "description": "asd",
+  "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.2.0"
+  }
+}
