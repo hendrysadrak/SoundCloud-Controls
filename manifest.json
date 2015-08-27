@@ -5,7 +5,7 @@
   "description": "SoundCloud Music Player Controls",
   "browser_action": {
     "default_title": "SoundCloud Controls",
-    "default_icon": "img/SoundCloud Controls-01 icon.png",
+    "default_icon": "img/128.png",
     "default_popup": "popup.html"
   },
   "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)",
@@ -27,7 +27,11 @@
     }
   ],
   "icons": {
-    "128": "img/SoundCloud Controls-01 icon.png",
-    "1500": "img/SoundCloud Controls-01.png"
+    "16": "img/16.png",
+    "32": "img/32.png",
+    "48": "img/48.png",
+    "128": "img/128.png",
+    "256": "img/256.png",
+    "1500": "img/1500.png"
   }
 }
