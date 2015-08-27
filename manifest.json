@@ -25,5 +25,9 @@
         "js/runInTab.js"
       ]
     }
-  ]
+  ],
+  "icons": {
+    "128": "img/SoundCloud Controls-01 icon.png",
+    "1500": "img/SoundCloud Controls-01.png"
+  }
 }
