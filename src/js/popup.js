@@ -80,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
         /**
          * Show song name
          */
-        $('.js-song').text(c.currentTrack || '');
+        $('.js-song')
+            .text(c.currentTrack || '')
+            .attr('title', c.currentTrack || '');
 
         tracker.sendEvent('Song', 'Listen', c.currentTrack);
     };
@@ -130,7 +132,6 @@ $(document).on('click', '.ripple', function (e) {
             left: xPos,
             width: size,
             height: size,
-
             backgroundColor: $buttonElement.data("ripple-color")
         })
         .appendTo($buttonElement)
