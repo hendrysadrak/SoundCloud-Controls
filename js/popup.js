@@ -36,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }, runScriptInTabs);
     }
 
+    function checkForSoundCloud() {
+        chrome.tabs.query({
+            currentWindow: true,
+            url: "*://soundcloud.com/*"
+        }, function (tabs) {
+            if (tabs.length > 0) $('.js-error-1').removeClass('show');
+            else $('.js-error-1').addClass('show');
+        });
+    }
+
     function runScriptInTabs(tabs) {
         for (var key in tabs) {
             var tab = tabs[key];
@@ -49,10 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         chrome.tabs.sendMessage(tabId, {
             trackMethod: trackMethod
-        }, setBtnIsPlaying);
+        }, afterScriptRun);
     }
 
-    function setBtnIsPlaying(c) {
+    function afterScriptRun(c) {
         if (c.isPlaying) {
             $('.btn-pause')
                 .attr('title', 'Pause')
@@ -63,9 +73,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 .attr('title', 'Play')
                 .addClass('is-play');
         }
+
+        $('.js-song').text(c.currentTrack || '');
     };
 
     function main() {
+        checkForSoundCloud();
+
         $('.btn-control').on('click', onControlsClick);
 
         $('.js-settings').on('click', function (e) {
@@ -87,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
     /**
      * Send fake call
      */
-    onControlsClick('fake');
+    var callBack = onControlsClick('fake');
 });
 
 /**

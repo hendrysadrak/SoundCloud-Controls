@@ -38,9 +38,11 @@
          * Send back if is playing
          */
         var isPlaying = getButtonElement('playControl').classList.contains('playing');
+        var currentTrack = document.getElementsByClassName('playbackSoundBadge__title')[0].title;
 
         sendResponse({
-            isPlaying: isPlaying
+            isPlaying: isPlaying,
+            currentTrack: currentTrack
         });
     });
 })();
