@@ -67,9 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function main() {
         $('.btn-control').on('click', onControlsClick);
+
         $('.js-settings').on('click', function (e) {
             e.preventDefault();
 
+            tracker.sendEvent('Settings', 'Click', 'Open');
+        });
+
+        $('.js-author').on('click', function (e) {
             tracker.sendEvent('Author', 'Click', 'Twitter');
         });
     }
