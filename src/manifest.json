@@ -8,7 +8,7 @@
     "default_icon": "img/128.png",
     "default_popup": "popup.html"
   },
-  "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (http://hendrysadrak.com)",
+  "author": "Hendry Sadrak <hendry.sadrak@outlook.com> (https://www.hendrysadrak.com)",
   "permissions": [
     "tabs",
     "storage",
